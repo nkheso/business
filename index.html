@@ -1,0 +1,2195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Meta -->
+  <title>Khalanga Digital Studio | Printing, Applications, CVs & Digital Services</title>
+  <meta name="description" content="Khalanga Digital Studio offers affordable printing, photocopying, scanning, CV creation, job applications, university and TVET applications, graphic design and digital services in Khaxani Village.">
+  <meta name="keywords" content="Internet café Khaxani Village, Printing services Khaxani Village, CV services Khaxani Village, University applications Khaxani, TVET applications Khaxani, NSFAS applications, Job applications, Printing and photocopying, Graphic design, Khalanga Digital Studio">
+  <meta name="author" content="Khalanga Digital Studio">
+  <!-- Fonts: Playfair Display (serif headings) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ========== RESET & VARIABLES ========== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --purple-deep: #1a0b2e;
+      --purple-primary: #6a0dad;
+      --purple-rich: #8e44ad;
+      --purple-soft: #b39ddb;
+      --purple-lavender: #d1c4e9;
+      --purple-light: #f3e5f5;
+      --purple-tile: #ede4f7;
+      --black: #0a0a0a;
+      --white: #ffffff;
+      --gray-100: #f8f9fa;
+      --gray-200: #e9ecef;
+      --gray-800: #2d2d2d;
+      --shadow-sm: 0 4px 12px rgba(106, 13, 173, 0.08);
+      --shadow-md: 0 8px 24px rgba(106, 13, 173, 0.12);
+      --shadow-lg: 0 16px 40px rgba(106, 13, 173, 0.16);
+      --radius: 16px;
+      --radius-sm: 10px;
+      --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      --font-sans: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background: var(--white);
+      color: var(--gray-800);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
+    /* Purple gradient background animations */
+    .gradient-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -2;
+      background: radial-gradient(circle at 20% 30%, rgba(106, 13, 173, 0.03) 0%, transparent 40%),
+                  radial-gradient(circle at 80% 70%, rgba(142, 68, 173, 0.04) 0%, transparent 45%);
+      pointer-events: none;
+    }
+
+    .floating-blob {
+      position: fixed;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(179, 157, 219, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      z-index: -1;
+      animation: floatBlob 20s infinite alternate ease-in-out;
+    }
+
+    .blob-1 { top: -100px; right: -100px; }
+    .blob-2 { bottom: -150px; left: -100px; animation-delay: -5s; }
+
+    @keyframes floatBlob {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(40px, -40px) scale(1.1); }
+    }
+
+    /* ========== TYPOGRAPHY ========== */
+    h1, h2, h3, h4 {
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      font-weight: 400;
+      letter-spacing: -0.5px;
+    }
+    h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 400;
+      letter-spacing: -0.3px;
+    }
+    h3 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: 400;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ========== UTILITY ========== */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .section-title h2 {
+      color: var(--purple-deep);
+      margin-bottom: 0.75rem;
+    }
+
+    .section-title p {
+      color: #6c5b7b;
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    .section-eyebrow {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--purple-rich);
+      margin-bottom: 1rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.9rem 1.8rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
+      transition: var(--transition);
+      text-align: center;
+      white-space: nowrap;
+      font-family: var(--font-sans);
+    }
+
+    .btn-primary {
+      background: var(--purple-primary);
+      color: var(--white);
+      box-shadow: 0 4px 14px rgba(106, 13, 173, 0.35);
+    }
+
+    .btn-primary:hover {
+      background: var(--purple-rich);
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 25px rgba(106, 13, 173, 0.45);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--purple-primary);
+      border: 2px solid var(--purple-primary);
+    }
+
+    .btn-outline:hover {
+      background: var(--purple-primary);
+      color: var(--white);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(106, 13, 173, 0.3);
+    }
+
+    .btn-whatsapp {
+      background: #25D366;
+      color: white;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+    }
+
+    .btn-whatsapp:hover {
+      background: #128C7E;
+      transform: translateY(-3px) scale(1.02);
+      box-shadow: 0 8px 25px rgba(37, 211, 102, 0.5);
+    }
+
+    /* ========== HEADER / NAV ========== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 20px rgba(106, 13, 173, 0.08);
+      transition: var(--transition);
+    }
+
+    .navbar.scrolled {
+      box-shadow: 0 4px 30px rgba(106, 13, 173, 0.15);
+    }
+
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 800;
+      font-size: 1.3rem;
+      color: var(--purple-deep);
+      letter-spacing: -0.5px;
+    }
+
+    .logo-icon {
+      width: 42px;
+      height: 42px;
+      background: linear-gradient(135deg, var(--purple-primary), var(--purple-rich));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.4rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(106, 13, 173, 0.3);
+    }
+
+    .logo-icon::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(255,255,255,0.3) 0%, transparent 60%);
+      animation: shine 4s infinite;
+    }
+
+    @keyframes shine {
+      0% { transform: translate(-30%, -30%) rotate(0deg); opacity: 0.3; }
+      50% { transform: translate(30%, 30%) rotate(180deg); opacity: 0.6; }
+      100% { transform: translate(-30%, -30%) rotate(360deg); opacity: 0.3; }
+    }
+
+    .logo-text span {
+      color: var(--purple-primary);
+    }
+
+    .logo-slogan {
+      font-size: 0.55rem;
+      letter-spacing: 2px;
+      color: var(--purple-rich);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.8rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-weight: 500;
+      font-size: 0.95rem;
+      color: var(--gray-800);
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--purple-primary);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      color: var(--purple-primary);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-whatsapp {
+      background: #25D366;
+      color: white !important;
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .nav-whatsapp:hover {
+      background: #128C7E;
+      transform: scale(1.05);
+    }
+
+    .nav-whatsapp::after { display: none; }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      z-index: 1100;
+    }
+
+    .hamburger span {
+      display: block;
+      width: 26px;
+      height: 3px;
+      background: var(--purple-deep);
+      border-radius: 3px;
+      transition: var(--transition);
+    }
+
+    .hamburger.active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .hamburger.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      padding: 4rem 0 5rem;
+      background: linear-gradient(135deg, #faf5ff 0%, #ffffff 50%, #f3e5f5 100%);
+      position: relative;
+      overflow: hidden;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(142, 68, 173, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      animation: floatBlob 15s infinite alternate;
+    }
+
+    .hero-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .hero-text {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .hero-text h1 {
+      color: var(--purple-deep);
+      margin-bottom: 1rem;
+      line-height: 1.15;
+    }
+
+    .hero-text h1 span {
+      font-style: italic;
+      color: var(--purple-primary);
+    }
+
+    .hero-text p {
+      font-size: 1.15rem;
+      color: #5a4a6a;
+      margin-bottom: 1.8rem;
+      max-width: 550px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeInRight 1s ease forwards;
+    }
+
+    .hero-graphic {
+      width: 100%;
+      max-width: 420px;
+      background: var(--white);
+      border-radius: 24px;
+      padding: 2rem;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      animation: floatCard 6s infinite ease-in-out;
+    }
+
+    @keyframes floatCard {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .hero-graphic::before {
+      content: '';
+      position: absolute;
+      top: -8px;
+      left: -8px;
+      right: -8px;
+      bottom: -8px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, var(--purple-primary), var(--purple-soft));
+      z-index: -1;
+      opacity: 0.2;
+    }
+
+    .graphic-icon {
+      font-size: 3rem;
+      color: var(--purple-primary);
+      margin-bottom: 1rem;
+    }
+
+    .graphic-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid var(--gray-200);
+    }
+
+    .graphic-row:last-child { border-bottom: none; }
+
+    .graphic-row i {
+      color: var(--purple-rich);
+      font-size: 1.2rem;
+      width: 24px;
+    }
+
+    .graphic-row span {
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+
+    /* ========== SERVICES (3-column, numbered) ========== */
+    .services-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .services-header h2 {
+      color: var(--purple-deep);
+      margin-bottom: 0.75rem;
+    }
+
+    .services-header p {
+      color: #6c5b7b;
+      max-width: 560px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    .services-cols {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid rgba(106, 13, 173, 0.12);
+      border-bottom: 1px solid rgba(106, 13, 173, 0.12);
+    }
+
+    .service-col {
+      padding: 2.5rem 2rem;
+      border-right: 1px solid rgba(106, 13, 173, 0.12);
+      transition: var(--transition);
+    }
+
+    .service-col:last-child {
+      border-right: none;
+    }
+
+    .service-col:hover {
+      background: rgba(237, 228, 247, 0.35);
+    }
+
+    .service-col-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-col-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--purple-tile);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: var(--purple-primary);
+    }
+
+    .service-col-num {
+      font-family: var(--font-sans);
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--purple-soft);
+    }
+
+    .service-col h3 {
+      font-size: 1.5rem;
+      color: var(--purple-deep);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+
+    .service-col h3 em {
+      font-style: italic;
+      color: var(--purple-rich);
+    }
+
+    .service-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .service-col ul li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.35rem 0;
+      font-size: 0.9rem;
+      color: #4a3a5a;
+    }
+
+    .service-col ul li i {
+      color: var(--purple-primary);
+      font-size: 0.7rem;
+      margin-top: 0.45rem;
+    }
+
+    /* ========== ABOUT US ========== */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .about-text h2 {
+      color: var(--purple-deep);
+      margin-bottom: 1rem;
+    }
+
+    .about-text p {
+      color: #5a4a6a;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 1.2rem;
+    }
+
+    .about-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      margin-bottom: 0.7rem;
+      font-size: 0.95rem;
+      color: var(--gray-800);
+    }
+
+    .about-list li i {
+      color: var(--purple-primary);
+      margin-top: 0.25rem;
+    }
+
+    .about-highlight {
+      background: var(--purple-light);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(106, 13, 173, 0.08);
+    }
+
+    .about-highlight h3 {
+      color: var(--purple-deep);
+      margin-bottom: 1rem;
+    }
+
+    .about-highlight p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      color: #4a3a5a;
+    }
+
+    .about-highlight .btn {
+      margin-top: 0.5rem;
+    }
+
+    /* ========== PRICING ========== */
+    .pricing-filters {
+      display: flex;
+      justify-content: center;
+      gap: 0.8rem;
+      flex-wrap: wrap;
+      margin-bottom: 2.5rem;
+    }
+
+    .filter-btn {
+      padding: 0.6rem 1.4rem;
+      border-radius: 50px;
+      border: 2px solid var(--purple-lavender);
+      background: var(--white);
+      color: var(--purple-deep);
+      font-weight: 600;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: var(--font-sans);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--purple-primary);
+      color: var(--white);
+      border-color: var(--purple-primary);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(106, 13, 173, 0.25);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .price-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 1.8rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(106, 13, 173, 0.08);
+      transition: var(--transition);
+      opacity: 0;
+      transform: translateY(20px);
+      animation: cardReveal 0.6s forwards;
+    }
+
+    .price-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .price-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .price-card h3 {
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--purple-deep);
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.8rem;
+      border-bottom: 2px solid var(--purple-light);
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .price-card h3 i {
+      color: var(--purple-primary);
+    }
+
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .price-table tr {
+      border-bottom: 1px solid var(--gray-200);
+      transition: var(--transition);
+    }
+
+    .price-table tr:last-child { border-bottom: none; }
+
+    .price-table tr:hover {
+      background: var(--purple-light);
+    }
+
+    .price-table td {
+      padding: 0.7rem 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .price-table td:last-child {
+      text-align: right;
+      font-weight: 700;
+      color: var(--purple-primary);
+      white-space: nowrap;
+    }
+
+    .price-note {
+      font-size: 0.8rem;
+      color: #8a7a9a;
+      margin-top: 0.8rem;
+      font-style: italic;
+    }
+
+    /* ========== PACKAGES ========== */
+    .packages-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.8rem;
+    }
+
+    .package-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid rgba(106, 13, 173, 0.08);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .package-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .package-card .package-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+    }
+
+    .package-card h3 {
+      font-family: var(--font-sans);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--purple-deep);
+      margin-bottom: 0.5rem;
+    }
+
+    .package-card .package-price {
+      font-family: var(--font-serif);
+      font-size: 1.8rem;
+      font-weight: 400;
+      color: var(--purple-primary);
+      margin-bottom: 0.8rem;
+    }
+
+    .package-card p {
+      font-size: 0.85rem;
+      color: #6b5b7b;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ========== DEPOSIT POLICY (2-column card) ========== */
+    .deposit-card {
+      background: var(--white);
+      border: 2px solid var(--purple-primary);
+      border-radius: 24px;
+      padding: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 3rem;
+      align-items: center;
+      box-shadow: var(--shadow-sm);
+      max-width: 1050px;
+      margin: 0 auto;
+    }
+
+    .deposit-left {
+      border-right: 1px solid rgba(106, 13, 173, 0.15);
+      padding-right: 2.5rem;
+    }
+
+    .deposit-left .deposit-eyebrow {
+      font-family: var(--font-sans);
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--purple-rich);
+      margin-bottom: 1.2rem;
+    }
+
+    .deposit-left .deposit-percent {
+      font-family: var(--font-serif);
+      font-size: clamp(4rem, 9vw, 6.5rem);
+      font-weight: 400;
+      color: var(--purple-primary);
+      line-height: 1;
+      letter-spacing: -3px;
+      margin-bottom: 0.5rem;
+    }
+
+    .deposit-left .deposit-label {
+      font-family: var(--font-serif);
+      font-size: 1.6rem;
+      font-weight: 400;
+      color: var(--purple-deep);
+    }
+
+    .deposit-right .deposit-desc {
+      font-size: 1rem;
+      color: #4a3a5a;
+      margin-bottom: 1.8rem;
+      line-height: 1.7;
+    }
+
+    .deposit-right .deposit-desc strong {
+      color: var(--purple-deep);
+      font-weight: 700;
+    }
+
+    .deposit-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.6rem 1.2rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .deposit-features span {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: #4a3a5a;
+    }
+
+    .deposit-features span i {
+      color: var(--purple-primary);
+      font-size: 0.8rem;
+      width: 14px;
+    }
+
+    .deposit-note {
+      background: #f5f0fa;
+      border-left: 4px solid #e65100;
+      border-radius: 10px;
+      padding: 1rem 1.2rem;
+      font-size: 0.85rem;
+      color: #4a3a5a;
+      display: flex;
+      gap: 0.7rem;
+      align-items: flex-start;
+    }
+
+    .deposit-note i {
+      color: #e65100;
+      margin-top: 0.15rem;
+    }
+    
+     /* ==============================
+   MOVING STRIP
+============================== */
+
+.moving-strip {
+  width: 100%;
+  overflow: hidden;
+  background: #0b0710;
+  border-top: 1px solid rgba(155, 89, 255, 0.25);
+  border-bottom: 1px solid rgba(155, 89, 255, 0.25);
+  padding: 15px 0;
+  position: relative;
+}
+
+/* Purple glow */
+.moving-strip::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 20% 50%,
+      rgba(138, 43, 226, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 50%,
+      rgba(111, 45, 189, 0.15),
+      transparent 35%
+    );
+  pointer-events: none;
+}
+
+.moving-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  white-space: nowrap;
+  animation: movingStrip 28s linear infinite;
+}
+
+.moving-track span {
+  display: inline-block;
+  margin: 0 18px;
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+
+.moving-track span:nth-child(even) {
+  color: #a855f7;
+  font-size: 15px;
+}
+
+/* Moving animation */
+@keyframes movingStrip {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Pause when hovering */
+.moving-strip:hover .moving-track {
+  animation-play-state: paused;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .moving-strip {
+    padding: 12px 0;
+  }
+
+  .moving-track span {
+    margin: 0 12px;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .moving-track span:nth-child(even) {
+    font-size: 13px;
+  }
+
+  .moving-track {
+    animation-duration: 22s;
+  }
+}
+
+
+    /* ========== CONTACT (dark, 3-column) ========== */
+    .contact-section {
+      background: #a485ee;
+      color: white;
+      position: relative;
+      overflow: hidden;
+      padding: 5rem 0;
+    }
+
+    .contact-section::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(142, 68, 173, 0.15) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .contact-header {
+      text-align: center;
+      margin-bottom: 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact-header .section-eyebrow {
+      color: var(--purple-soft);
+    }
+
+    .contact-header h2 {
+      color: var(--white);
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      margin-bottom: 1rem;
+    }
+
+    .contact-header h2 em {
+      font-style: italic;
+      color: var(--purple-soft);
+    }
+
+    .contact-header p {
+      color: rgba(255, 255, 255, 0.7);
+      max-width: 520px;
+      margin: 0 auto;
+      font-size: 1rem;
+    }
+
+    .contact-three-col {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      gap: 1.5rem;
+      position: relative;
+      z-index: 1;
+      align-items: start;
+    }
+
+    .contact-panel {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 18px;
+      padding: 1.8rem;
+    }
+
+    /* Contact details (left) */
+    .contact-detail-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-detail-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-detail-icon {
+      width: 38px;
+      height: 38px;
+      min-width: 38px;
+      border-radius: 50%;
+      background: rgba(179, 157, 219, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--purple-soft);
+      font-size: 0.9rem;
+    }
+
+    .contact-detail-item .detail-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--purple-soft);
+      margin-bottom: 0.2rem;
+    }
+
+    .contact-detail-item .detail-value {
+      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.5;
+    }
+
+    .contact-detail-item .detail-value a {
+      color: rgba(255, 255, 255, 0.85);
+      transition: var(--transition);
+    }
+
+    .contact-detail-item .detail-value a:hover {
+      color: var(--purple-soft);
+    }
+
+    .contact-buttons-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+      margin-top: 1.8rem;
+    }
+
+    .contact-buttons-stack .btn {
+      width: 100%;
+      justify-content: center;
+      font-size: 0.9rem;
+      padding: 0.8rem 1.2rem;
+    }
+
+    .btn-outline-light {
+      background: transparent;
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    .btn-outline-light:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.5);
+      color: white;
+    }
+
+    /* Form (middle) */
+    .contact-form-panel h3 {
+      font-size: 1.25rem;
+      color: white;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 400;
+    }
+
+    .contact-form-panel h3 i {
+      color: var(--purple-soft);
+      font-size: 1rem;
+    }
+
+    .dark-form-group {
+      margin-bottom: 1.2rem;
+      position: relative;
+    }
+
+    .dark-form-group input,
+    .dark-form-group textarea {
+      width: 100%;
+      padding: 0.85rem 0;
+      border: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      background: transparent;
+      color: white;
+      font-family: inherit;
+      font-size: 0.9rem;
+      transition: var(--transition);
+      resize: none;
+    }
+
+    .dark-form-group input::placeholder,
+    .dark-form-group textarea::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .dark-form-group input:focus,
+    .dark-form-group textarea:focus {
+      outline: none;
+      border-bottom-color: var(--purple-soft);
+    }
+
+    .dark-form-group textarea {
+      min-height: 70px;
+    }
+
+    .contact-form-panel .btn {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+
+    /* Hours (right) */
+    .contact-hours-panel h3 {
+      font-size: 1.25rem;
+      color: white;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-weight: 400;
+    }
+
+    .contact-hours-panel h3 i {
+      color: var(--purple-soft);
+      font-size: 1rem;
+    }
+
+    .dark-hours-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.8);
+      gap: 1rem;
+    }
+
+    .dark-hours-row:last-of-type {
+      border-bottom: none;
+    }
+
+    .dark-hours-row .day {
+      font-weight: 600;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .dark-hours-row .time {
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .dark-after-hours {
+      background: rgba(255, 255, 255, 0.04);
+      border-left: 3px solid var(--purple-soft);
+      border-radius: 8px;
+      padding: 0.9rem 1rem;
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.7);
+      display: flex;
+      gap: 0.6rem;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
+
+    .dark-after-hours i {
+      color: var(--purple-soft);
+      margin-top: 0.15rem;
+    }
+
+    /* ========== FOOTER ========== */
+    footer {
+      background: var(--black);
+      color: rgba(255,255,255,0.7);
+      padding: 2.5rem 0 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-brand .logo {
+      color: white;
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-brand p {
+      font-size: 0.85rem;
+      opacity: 0.7;
+      max-width: 300px;
+    }
+
+    .footer-links h4 {
+      color: var(--purple-lavender);
+      margin-bottom: 0.8rem;
+      font-size: 1rem;
+      font-family: var(--font-sans);
+      font-weight: 600;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links ul li a {
+      transition: var(--transition);
+    }
+
+    .footer-links ul li a:hover {
+      color: var(--purple-lavender);
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 1rem;
+      margin-top: 0.8rem;
+    }
+
+    .footer-social a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+
+    .footer-social a:hover {
+      background: var(--purple-primary);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+
+    /* ========== SCROLL TO TOP ========== */
+    .scroll-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 48px;
+      height: 48px;
+      background: var(--purple-primary);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(106, 13, 173, 0.4);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      transition: var(--transition);
+      z-index: 999;
+    }
+
+    .scroll-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .scroll-top:hover {
+      background: var(--purple-rich);
+      transform: translateY(-4px) scale(1.05);
+    }
+
+    /* ========== FLOATING WHATSAPP ========== */
+    .float-whatsapp {
+      position: fixed;
+      bottom: 2rem;
+      left: 2rem;
+      width: 56px;
+      height: 56px;
+      background: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+      z-index: 999;
+      transition: var(--transition);
+      animation: pulseWhats 2s infinite;
+    }
+
+    .float-whatsapp:hover {
+      transform: scale(1.1);
+      background: #128C7E;
+    }
+
+    @keyframes pulseWhats {
+      0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); }
+      70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+    }
+
+    /* ========== ANIMATIONS ========== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(40px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes cardReveal {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 992px) {
+      .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero-text p {
+        margin: 0 auto 1.8rem;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-cols {
+        grid-template-columns: 1fr;
+      }
+
+      .service-col {
+        border-right: none;
+        border-bottom: 1px solid rgba(106, 13, 173, 0.12);
+      }
+
+      .service-col:last-child {
+        border-bottom: none;
+      }
+
+      .deposit-card {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+      }
+
+      .deposit-left {
+        border-right: none;
+        border-bottom: 1px solid rgba(106, 13, 173, 0.15);
+        padding-right: 0;
+        padding-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .deposit-features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-three-col {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        max-width: 320px;
+        height: 100vh;
+        background: var(--white);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5rem 2rem 2rem;
+        gap: 1.5rem;
+        box-shadow: -10px 0 40px rgba(0,0,0,0.1);
+        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        z-index: 1050;
+      }
+
+      .nav-links.open {
+        right: 0;
+      }
+
+      .nav-links a {
+        font-size: 1.1rem;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 3rem 0;
+      }
+
+      .section {
+        padding: 3rem 0;
+      }
+
+      .deposit-features {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-brand p {
+        margin: 0 auto;
+      }
+
+      .footer-social {
+        justify-content: center;
+      }
+
+      .float-whatsapp {
+        bottom: 1.2rem;
+        left: 1.2rem;
+        width: 48px;
+        height: 48px;
+        font-size: 1.4rem;
+      }
+
+      .scroll-top {
+        bottom: 1.2rem;
+        right: 1.2rem;
+        width: 44px;
+        height: 44px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .hero-buttons .btn {
+        justify-content: center;
+      }
+
+      .contact-buttons-stack {
+        flex-direction: column;
+      }
+
+      .services-header h2,
+      .contact-header h2 {
+        font-size: 1.9rem;
+      }
+    }
+
+    /* Overlay for mobile menu */
+    .nav-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      z-index: 1040;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .nav-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+  </style>
+</head>
+<body>
+  <!-- Background effects -->
+  <div class="gradient-bg"></div>
+  <div class="floating-blob blob-1"></div>
+  <div class="floating-blob blob-2"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="logo">
+        <div class="logo-icon">
+          <i class="fas fa-print"></i>
+        </div>
+        <div>
+          <div class="logo-text">Khalanga<span> Digital Studio</span></div>
+          <div class="logo-slogan">PRINT • APPLY • DESIGN • CONNECT</div>
+        </div>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#prices">Prices</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <a href="https://wa.me/27604357200?text=Hi%20Khalanga%20Digital%20Studio%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" class="nav-whatsapp">
+            <i class="fab fa-whatsapp"></i> WhatsApp
+          </a>
+        </li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Khalanga <span>Digital Studio</span></h1>
+          <p>Your Local Digital, Printing &amp; Application Centre — your one-stop solution for printing, applications, CVs, digital services and creative designs.</p>
+          <div class="hero-buttons">
+            <a href="#services" class="btn btn-primary">
+              <i class="fas fa-concierge-bell"></i> View Services
+            </a>
+            <a href="#prices" class="btn btn-outline">
+              <i class="fas fa-tags"></i> View Prices
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-envelope"></i> Contact Us
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-graphic">
+            <div class="graphic-icon"><i class="fas fa-print"></i></div>
+            <div class="graphic-row">
+              <i class="fas fa-file-alt"></i>
+              <span>Printing &amp; Photocopying</span>
+            </div>
+            <div class="graphic-row">
+              <i class="fas fa-user-tie"></i>
+              <span>CV Creation &amp; Revamping</span>
+            </div>
+            <div class="graphic-row">
+              <i class="fas fa-graduation-cap"></i>
+              <span>University &amp; TVET Applications</span>
+            </div>
+            <div class="graphic-row">
+              <i class="fas fa-paint-brush"></i>
+              <span>Graphic Design &amp; Invitations</span>
+            </div>
+            <div class="graphic-row">
+              <i class="fas fa-laptop"></i>
+              <span>Online Registrations &amp; JOB Applications</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- MOVING STRIP -->
+<div class="moving-strip">
+  <div class="moving-track">
+    <span>PRINTING</span>
+    <span>•</span>
+    <span>PHOTOCOPYING</span>
+    <span>•</span>
+    <span>CV CREATION</span>
+    <span>•</span>
+    <span>JOB APPLICATIONS</span>
+    <span>•</span>
+    <span>UNIVERSITY APPLICATIONS</span>
+    <span>•</span>
+    <span>TVET APPLICATIONS</span>
+    <span>•</span>
+    <span>GRAPHIC DESIGN</span>
+    <span>•</span>
+    <span>NSFAS APPLICATIONS</span>
+    <span>•</span>
+    <span>BURRARY APPLICATIONS</span>
+    <span>•</span>
+    <span>DIGITAL SERVICES</span>
+    <span>•</span>
+
+    <!-- Duplicate for seamless movement -->
+    <span>PRINTING</span>
+    <span>•</span>
+    <span>PHOTOCOPYING</span>
+    <span>•</span>
+    <span>CV CREATION</span>
+    <span>•</span>
+    <span>JOB APPLICATIONS</span>
+    <span>•</span>
+    <span>UNIVERSITY APPLICATIONS</span>
+    <span>•</span>
+    <span>TVET APPLICATIONS</span>
+    <span>•</span>
+    <span>GRAPHIC DESIGN</span>
+    <span>•</span>
+    <span>NSFAS APPLICATIONS</span>
+    <span>•</span>
+    <span>BURRARY APPLICATIONS</span>
+    <span>•</span>
+    <span>DIGITAL SERVICES</span>
+    <span>•</span>
+  </div>
+</div>
+  
+
+  <!-- ========== ABOUT US ========== -->
+  <section class="section" id="about" style="background: var(--gray-100);">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <span class="section-eyebrow">About Us</span>
+          <h2>About Khalanga Digital Studio</h2>
+          <p>Khalanga Digital Studio is a local digital, printing and application centre based in Khaxani Village, dedicated to making essential digital services accessible and affordable for everyone in our community.</p>
+          <p>We understand the challenges students and job seekers face when trying to access online applications, professional documents, and quality printing. That's why we've created a one-stop shop where you can get everything done quickly and professionally.</p>
+          
+        </div>
+
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING ========== -->
+  <section class="section" id="prices">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="section-eyebrow">Pricing</span>
+        <h2>Our Services & Prices</h2>
+        <p>All prices are price friendly — your happiness is our pleasure, you're in the right hands.</p>
+      </div>
+
+      <div class="pricing-filters reveal">
+        <button class="filter-btn active" data-price-filter="all">All Prices</button>
+        <button class="filter-btn" data-price-filter="university">University</button>
+        <button class="filter-btn" data-price-filter="tvet">TVET</button>
+        <button class="filter-btn" data-price-filter="cv">CV &amp; Jobs</button>
+        <button class="filter-btn" data-price-filter="printing">Printing</button>
+        <button class="filter-btn" data-price-filter="other">Other Digital</button>
+        <button class="filter-btn" data-price-filter="design">Design</button>
+      </div>
+
+      <div class="pricing-grid" id="pricingGrid">
+        <!-- University -->
+        <div class="price-card" data-price-category="university">
+          <h3><i class="fas fa-university"></i> University Applications</h3>
+          <table class="price-table">
+            <tr><td>1 University Application</td><td>R20</td></tr>
+            <tr><td>5 University Applications</td><td>R80</td></tr>
+            <tr><td>7 University Applications – Grade 12</td><td>R100</td></tr>
+            <tr><td>7 University Applications – Gap Year</td><td>R80</td></tr>
+            <tr><td>4 Universities + 4 TVET Applications</td><td>R120</td></tr>
+            <tr><td>Unlimited University + TVET Applications</td><td>R150</td></tr>
+          </table>
+        </div>
+
+        <!-- TVET -->
+        <div class="price-card" data-price-category="tvet">
+          <h3><i class="fas fa-school"></i> TVET Applications</h3>
+          <table class="price-table">
+            <tr><td>1 TVET Application</td><td>R20</td></tr>
+            <tr><td>5 TVET Applications</td><td>R100</td></tr>
+          </table>
+        </div>
+
+        <!-- CV & Job -->
+        <div class="price-card" data-price-category="cv">
+          <h3><i class="fas fa-file-signature"></i> CV &amp; Job Applications</h3>
+          <table class="price-table">
+            <tr><td>CV Revamp / Update</td><td>R30</td></tr>
+            <tr><td>New CV From Scratch</td><td>R50</td></tr>
+            <tr><td>Cover Letter</td><td>R15</td></tr>
+            <tr><td>1 Job Application</td><td>R15</td></tr>
+            <tr><td>5 Job Applications</td><td>R60</td></tr>
+            <tr><td>New CV + 5 Job Applications</td><td>R90</td></tr>
+            <tr><td>CV Revamp + 5 Job Applications</td><td>R70</td></tr>
+          </table>
+        </div>
+
+        <!-- Printing -->
+        <div class="price-card" data-price-category="printing">
+          <h3><i class="fas fa-print"></i> Printing &amp; Documents</h3>
+          <table class="price-table">
+            <tr><td>Scanning</td><td>R5</td></tr>
+            <tr><td>Photocopy</td><td>R2</td></tr>
+            <tr><td>Printing (Colour)</td><td>R8</td></tr>
+            <tr><td>Printing (B&amp;W)</td><td>R5</td></tr>
+            <tr><td>Typing – 30 Minutes</td><td>R20</td></tr>
+            <tr><td>Typing – 1 Hour</td><td>R45</td></tr>
+          </table>
+        </div>
+
+        <!-- Other Digital -->
+        <div class="price-card" data-price-category="other">
+          <h3><i class="fas fa-laptop"></i> Other Digital Services</h3>
+          <table class="price-table">
+            <tr><td>NSFAS Application</td><td>R20</td></tr>
+            <tr><td>Bursary Application</td><td>R30</td></tr>
+            <tr><td>Learnership &amp; Internship Application</td><td>R15</td></tr>
+            <tr><td>Online Registration</td><td>R15</td></tr>
+            <tr><td>Email Creation &amp; Assistance</td><td>R15</td></tr>
+            <tr><td>Professional Email Job Application</td><td>R15</td></tr>
+            <tr><td>Virtual Interview Using Our Laptop</td><td>R30</td></tr>
+            <tr><td>Document Formatting</td><td>R15</td></tr>
+            <tr><td>PDF Conversion &amp; Editing</td><td>R15</td></tr>
+            <tr><td>Z83 Form Filling</td><td>R15</td></tr>
+          </table>
+        </div>
+
+        <!-- Design -->
+        <div class="price-card" data-price-category="design">
+          <h3><i class="fas fa-paint-brush"></i> Design Services</h3>
+          <table class="price-table">
+            <tr><td>Flyers &amp; Posters</td><td>From R30</td></tr>
+            <tr><td>Funeral &amp; Wedding Programmes</td><td>From R45</td></tr>
+            <tr><td>Invitations</td><td>From R30</td></tr>
+            <tr><td>Business Cards</td><td>From R20</td></tr>
+            <tr><td>Price List Design</td><td>R30</td></tr>
+            <tr><td>Video Invitation</td><td>R100</td></tr>
+          </table>
+          <p class="price-note">* Prices may vary for complex or customised design work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SPECIAL PACKAGES ========== -->
+  <section class="section" id="packages" style="background: var(--gray-100);">
+    <div class="container">
+      <div class="section-title reveal">
+        <span class="section-eyebrow">Packages</span>
+        <h2>Special Packages</h2>
+        <p>Save more with our specially curated packages for students and job seekers.</p>
+      </div>
+
+      <div class="packages-grid">
+        <div class="package-card reveal">
+          <div class="package-icon"></div>
+          <h3>Student Application Package</h3>
+          <div class="package-price">R120</div>
+          <p>4 Universities + 4 TVETs</p>
+        </div>
+
+        <div class="package-card reveal">
+          <div class="package-icon"></div>
+          <h3>Unlimited Application Package</h3>
+          <div class="package-price">R150</div>
+          <p>Unlimited University + TVET Applications</p>
+        </div>
+
+        <div class="package-card reveal">
+          <div class="package-icon"></div>
+          <h3>Job Seeker Starter</h3>
+          <div class="package-price">R90</div>
+          <p>New CV + 5 Job Applications</p>
+        </div>
+
+        <div class="package-card reveal">
+          <div class="package-icon"></div>
+          <h3>Job Seeker Upgrade</h3>
+          <div class="package-price">R70</div>
+          <p>CV Revamp + 5 Job Applications</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== DEPOSIT POLICY (2-column card) ========== -->
+  <section class="section">
+    <div class="container">
+      <div class="deposit-card reveal">
+        <div class="deposit-left">
+          <div class="deposit-eyebrow">Important</div>
+          <div class="deposit-percent">50%</div>
+          <div class="deposit-label">Deposit Policy</div>
+        </div>
+        <div class="deposit-right">
+          <p class="deposit-desc">
+            A <strong>50% upfront deposit</strong> is required for services where Khalanga Digital Studio needs to use its laptop or computer to complete the work.
+          </p>
+          <div class="deposit-features">
+            <span><i class="fas fa-check-circle"></i> Online Applications</span>
+            <span><i class="fas fa-check-circle"></i> CV Creation</span>
+            <span><i class="fas fa-check-circle"></i> Job Applications</span>
+            <span><i class="fas fa-check-circle"></i> University Applications</span>
+            <span><i class="fas fa-check-circle"></i> TVET Applications</span>
+            <span><i class="fas fa-check-circle"></i> NSFAS / Bursary Applications</span>
+            <span><i class="fas fa-check-circle"></i> Graphic Design</span>
+            <span><i class="fas fa-check-circle"></i> Document Formatting</span>
+            <span><i class="fas fa-check-circle"></i> Online Registrations</span>
+            <span><i class="fas fa-check-circle"></i> Virtual Interview Assistance</span>
+          </div>
+          <div class="deposit-note">
+            <i class="fas fa-exclamation-circle"></i>
+            <span>Printing, scanning and photocopying do not require the 50% deposit. Prices may vary for complex or customised design work.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT (dark, 3-column) ========== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-header reveal">
+        <span class="section-eyebrow">Get in touch</span>
+        <h2>Need help? <em>Let us get it done.</em></h2>
+        <p>Whether you need a CV, application, printing, design or digital assistance, contact Khalanga Digital Studio.</p>
+      </div>
+
+      <div class="contact-three-col">
+        <!-- Left: contact details + buttons -->
+        <div class="contact-panel reveal">
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <div class="detail-label">Phone</div>
+              <div class="detail-value"><a href="tel:0604357200">060 435 7200</a></div>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <div class="detail-label">Email</div>
+              <div class="detail-value"><a href="mailto:mathebulankheso8@gmail.com">mathebulankheso8@gmail.com</a></div>
+            </div>
+          </div>
+
+          <div class="contact-detail-item">
+            <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <div class="detail-label">Location</div>
+              <div class="detail-value">Khaxani Village, Main Road — 3 minutes from Shihlomule High School</div>
+            </div>
+          </div>
+
+          <div class="contact-buttons-stack">
+            <a href="tel:0604357200" class="btn btn-primary">
+              <i class="fas fa-phone"></i> Call Us
+            </a>
+            <a href="mailto:mathebulankheso8@gmail.com" class="btn btn-outline-light">
+              <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://wa.me/27604357200?text=Hi%20Khalanga%20Digital%20Studio%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" class="btn btn-whatsapp">
+              <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <!-- Middle: form -->
+        <div class="contact-panel contact-form-panel reveal">
+          <h3><i class="fas fa-paper-plane"></i> Send Us a Message</h3>
+          <form id="contactForm">
+            <div class="dark-form-group">
+              <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="dark-form-group">
+              <input type="email" id="email" placeholder="Your Email" required>
+            </div>
+            <div class="dark-form-group">
+              <input type="tel" id="phone" placeholder="Your Phone Number">
+            </div>
+            <div class="dark-form-group">
+              <textarea id="message" placeholder="What do you need help with?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: hours -->
+        <div class="contact-panel contact-hours-panel reveal">
+          <h3><i class="fas fa-clock"></i> Operating Hours</h3>
+          <div class="dark-hours-row">
+            <span class="day">Monday – Friday</span>
+            <span class="time">09:00 – 17:00</span>
+          </div>
+          <div class="dark-hours-row">
+            <span class="day">Saturday</span>
+            <span class="time">09:00 – 15:00</span>
+          </div>
+          <div class="dark-hours-row">
+            <span class="day">Sunday &amp; Public Holidays</span>
+            <span class="time">09:00 – 13:00</span>
+          </div>
+          <div class="dark-after-hours">
+            <i class="fas fa-exclamation-circle"></i>
+            <span>After-hours services available at an additional R5 fee.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon"><i class="fas fa-print"></i></div>
+            <div>
+              <div class="logo-text" style="color:white;">Khalanga<span style="color:var(--purple-lavender);"> Digital</span></div>
+              <div class="logo-slogan" style="color:var(--purple-lavender);">PRINT • APPLY • DESIGN • CONNECT</div>
+            </div>
+          </div>
+          <p>Your local digital, printing &amp; application centre at Khaxani Village. Fast, affordable, and professional services for everyone.</p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#prices">Prices</a></li>
+            <li><a href="#packages">Packages</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:0604357200"><i class="fas fa-phone"></i> 060 435 7200</a></li>
+            <li><a href="mailto:mathebulankheso8@gmail.com"><i class="fas fa-envelope"></i> mathebulankheso8@gmail.com</a></li>
+            <li><i class="fas fa-map-marker-alt"></i> Khaxani Village</li>
+          </ul>
+          <div class="footer-social">
+            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram (coming soon)"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="TikTok (coming soon)"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/27604357200" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+          <p style="font-size:0.75rem; opacity:0.5; margin-top:0.5rem;">Facebook: Mathebula Nkheso</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        &copy; 2025 Khalanga Digital Studio. All rights reserved. | Khaxani Village, South Africa
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating elements -->
+  <a href="https://wa.me/27604357200?text=Hi%20Khalanga%20Digital%20Studio%2C%20I%20would%20like%20to%20enquire%20about%20your%20services." target="_blank" class="float-whatsapp" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ========== JAVASCRIPT ========== -->
+  <script>
+    (function() {
+      'use strict';
+
+      // ========== MOBILE NAVIGATION ==========
+      const hamburger = document.getElementById('hamburger');
+      const navLinks = document.getElementById('navLinks');
+      const navOverlay = document.getElementById('navOverlay');
+
+      function toggleMenu() {
+        hamburger.classList.toggle('active');
+        navLinks.classList.toggle('open');
+        navOverlay.classList.toggle('active');
+        document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+      }
+
+      function closeMenu() {
+        hamburger.classList.remove('active');
+        navLinks.classList.remove('open');
+        navOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+
+      hamburger.addEventListener('click', toggleMenu);
+      navOverlay.addEventListener('click', closeMenu);
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', closeMenu);
+      });
+
+      // ========== STICKY NAVBAR ==========
+      const navbar = document.getElementById('navbar');
+      const scrollTopBtn = document.getElementById('scrollTop');
+
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.scrollY > 50);
+        scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+      });
+
+      // ========== SCROLL TO TOP ==========
+      scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+      // ========== SMOOTH SCROLLING ==========
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+      });
+
+      // ========== REVEAL ANIMATIONS ==========
+      const revealElements = document.querySelectorAll('.reveal, .price-card');
+
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.classList.add('visible');
+            }, index * 80);
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // ========== PRICING FILTER ==========
+      const priceFilterBtns = document.querySelectorAll('.pricing-filters .filter-btn');
+      const priceCards = document.querySelectorAll('.price-card');
+
+      priceFilterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          priceFilterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-price-filter');
+
+          priceCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-price-category') === filter) {
+              card.style.display = 'block';
+              setTimeout(() => card.classList.add('visible'), 50);
+            } else {
+              card.style.display = 'none';
+              card.classList.remove('visible');
+            }
+          });
+        });
+      });
+
+    })();
+  </script>
+</body>
+</html>
